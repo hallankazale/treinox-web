@@ -11,7 +11,7 @@
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:25px;padding-top:38px}.hero-art{min-height:270px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.figure{font-size:110px}}
 @media(max-width:560px){.container{width:min(100% - 24px,1100px)}.top{height:67px}.brand{font-size:22px}.pill{font-size:9px}.panel{padding:17px}.formgrid{grid-template-columns:1fr}.cards{gap:10px}.visual{height:111px}.visual svg{width:85px;height:85px}.card .inside{padding:11px}.premium{flex-direction:column;align-items:stretch}h1{font-size:45px}.stats{gap:14px}.fl1,.fl2{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
-.visual img{display:block;width:100%;height:100%;object-fit:cover}\n</style>
+.visual img{display:block;width:100%;height:100%;object-fit:contain;background:#102538}.gif-label{position:absolute;right:8px;bottom:8px;padding:4px 7px;border-radius:7px;background:#0c2636dc;border:1px solid #397468;color:#a8ffe8;font:800 10px "DM Sans",sans-serif;letter-spacing:.03em;pointer-events:none}@media(max-width:560px){.visual{height:151px}}\n</style>
 </head>
 <body>
 <header class="container top"><div class="brand"><span class="mark">X</span> TREINO<span style="color:#69e7c3">X</span></div><span class="pill">Demonstração grátis</span></header>
@@ -68,7 +68,7 @@ function createPlan(){
  const location=$('location').value, goal=$('goal').value, level=$('level').value, days=Number($('days').value);
  const options=exercises.filter(x=>x.place===location); const order=goal==='mobilidade'?[...options].reverse():goal==='forca'?[...options].sort((a,b)=>a.group==='Pernas'?-1:b.group==='Pernas'?1:0):options;
  const free=order.slice(0,4); $('cards').replaceChildren();
- for(const x of free){const card=document.createElement('article');card.className='card';card.innerHTML='<div class="visual"><img src="/gifs/ex-'+String(exercises.indexOf(x)+1).padStart(2,'0')+'.gif" loading="lazy" alt="Animação esquemática de movimento"></div><div class="inside"><span class="tag"></span><b></b><div class="small"></div><p class="small"></p></div>';card.querySelector('.tag').textContent=x.group;card.querySelector('b').textContent=x.n;card.querySelectorAll('.small')[0].textContent=x.sets;card.querySelector('p').textContent=x.desc;$('cards').append(card);}
+ for(const x of free){const card=document.createElement('article');card.className='card';card.innerHTML='<div class="visual"><img src="/gifs/ex-'+String(exercises.indexOf(x)+1).padStart(2,'0')+'.gif?v=3" loading="eager" decoding="async" alt="GIF demonstrativo do exercício"><span class="gif-label">GIF animado</span></div><div class="inside"><span class="tag"></span><b></b><div class="small"></div><p class="small"></p></div>';card.querySelector('.tag').textContent=x.group;card.querySelector('b').textContent=x.n;card.querySelectorAll('.small')[0].textContent=x.sets;card.querySelector('p').textContent=x.desc;const preview=card.querySelector('img');preview.alt='GIF demonstrativo: '+x.n;preview.addEventListener('error',()=>{const msg=document.createElement('span');msg.className='small';msg.textContent='Animação indisponível';preview.replaceWith(msg);});$('cards').append(card);}
  $('summary').textContent='Treino '+(location==='casa'?'em casa':'na academia')+' · '+days+' dias por semana · '+level+' · objetivo: '+goal+'.';
  $('tabs').replaceChildren();
  for(let w=1;w<=4;w++){const btn=document.createElement('button');btn.type='button';btn.textContent='Semana '+w;btn.addEventListener('click',()=>selectWeek(w,days,level));$('tabs').append(btn);}
