@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080f1e"><meta name="description" content="TreinoX: plano de exercícios para casa ou academia com uma prévia gratuita.">
+<title>TreinoX | Seu ritmo. Seu resultado.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap');
+:root{color-scheme:dark;--bg:#080f1e;--panel:#121d32;--line:#27344e;--dim:#9aabc4;--white:#f4f8ff;--mint:#69e7c3;--blue:#5c8bff}
+*{box-sizing:border-box}body{margin:0;font-family:'DM Sans',sans-serif;color:var(--white);background:radial-gradient(circle at 80% -5%,#1c3c50 0,transparent 40%),var(--bg);min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid var(--mint);outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.5}.container{width:min(1100px,calc(100% - 36px));margin:auto}.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #263248}.brand{display:flex;align-items:center;gap:10px;font:800 25px Outfit}.mark{background:var(--mint);color:#091d1e;padding:6px 10px;border-radius:12px}.pill{font-size:11px;letter-spacing:.08em;border:1px solid #3d5164;padding:8px 12px;border-radius:40px;color:#a9e9d9;text-transform:uppercase;font-weight:800}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;padding:54px 0 42px;align-items:center}h1,h2,h3{font-family:Outfit;margin:0}h1{font-weight:900;font-size:clamp(43px,6vw,70px);letter-spacing:-.06em;line-height:1.04}h1 span{color:var(--mint)}.sub{color:var(--dim);font-size:17px;line-height:1.75;max-width:530px}.lead{margin-top:18px}.primary,.secondary{border:0;border-radius:13px;padding:15px 22px;font-weight:800;min-height:48px}.primary{background:var(--mint);color:#08251f}.secondary{background:#1d2d47;border:1px solid #3d4f70;color:#eaf3ff}.primary:hover{filter:brightness(1.05)}.secondary:hover{background:#2b3c57}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.hero-art{background:linear-gradient(145deg,#1d3145,#111b31 67%);border:1px solid #2d405c;border-radius:27px;min-height:350px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.hero-art:before{content:'';position:absolute;inset:50px;border:1px solid #326465;border-radius:100%;box-shadow:0 0 0 35px #21415d22,0 0 0 90px #21415d18}.figure{position:relative;font-size:140px;z-index:1;animation:bob 2.5s ease-in-out infinite;filter:drop-shadow(0 14px 12px #07131f)}@keyframes bob{50%{transform:translateY(-12px) rotate(-4deg)}}.floating{position:absolute;padding:12px 17px;background:#152b3a;border:1px solid #34516c;border-radius:14px;color:#b4f0e3;font-weight:800;font-size:13px;z-index:2}.fl1{right:13px;top:22px}.fl2{left:14px;bottom:24px}.stats{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px;color:#aec0d4;font-size:13px}.stats b{display:block;color:#fff;font:700 24px Outfit}.panel{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:26px;margin-bottom:24px}.sectiontitle{font-size:27px;letter-spacing:-.03em}.muted{color:var(--dim);font-size:14px;line-height:1.55}.hide{display:none!important}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}.field label{display:block;font-size:13px;color:#c1d0e5;font-weight:700;margin-bottom:8px}.field select,.field input{width:100%;background:#0b1629;border:1px solid #36475f;color:#fff;padding:14px;border-radius:11px;min-height:49px}.steps{display:flex;gap:7px;margin:15px 0 22px}.steps i{background:#233249;display:block;flex:1;height:5px;border-radius:8px}.steps i.active{background:var(--mint)}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}.card{border:1px solid #2a3a53;background:#121e34;border-radius:17px;overflow:hidden}.visual{height:145px;display:flex;justify-content:center;align-items:center;position:relative;background:radial-gradient(circle,#275356,#172b40 65%,#0e1c2f);overflow:hidden}.visual svg{width:112px;height:112px;animation:move 1.5s ease-in-out infinite;transform-origin:50% 60%}.visual svg circle{fill:var(--mint)}.visual svg line{stroke:#a7fae2;stroke-width:8;stroke-linecap:round}@keyframes move{50%{transform:rotate(8deg) translateY(6px)}}.card:nth-child(2n) .visual svg{animation:move2 1.3s ease-in-out infinite}@keyframes move2{50%{transform:translateY(-8px) scale(.91)}}.card .inside{padding:15px}.card b{font-size:14px;display:block;min-height:40px}.card .small{font-size:12px;color:#8ca2bd;line-height:1.5}.tag{font-size:10px;background:#263e45;color:#b3f0e0;padding:5px 8px;border-radius:6px;display:inline-block;margin-bottom:8px;font-weight:800}.premium{margin:10px 0 40px;background:linear-gradient(120deg,#142739,#112034);border:1px solid #406477;border-radius:20px;padding:28px;display:flex;justify-content:space-between;gap:18px;align-items:center}.price{font-size:35px;font-weight:900;font-family:Outfit;color:var(--mint)}.week-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.week-tabs button{border:1px solid #3a4964;background:#1b2942;color:#b6c5d9;border-radius:10px;padding:10px 15px;font-weight:700}.week-tabs .selected{background:#76e5c7;color:#032320;border-color:#76e5c7}.footer{padding:26px 0 48px;border-top:1px solid #24344b;color:#8194b3;font-size:12px;line-height:1.7}.tip{border-left:3px solid var(--mint);background:#19303e;padding:12px 15px;border-radius:8px;font-size:13px;color:#bee8dc;line-height:1.6}.smallprint{font-size:12px;color:#8298b0;margin-top:12px}.banner{background:#263b29;color:#dbfce4;border:1px solid #457253;border-radius:10px;padding:12px 15px;font-size:13px}.invalid{border-color:#d98787!important}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:25px;padding-top:38px}.hero-art{min-height:270px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.figure{font-size:110px}}
+@media(max-width:560px){.container{width:min(100% - 24px,1100px)}.top{height:67px}.brand{font-size:22px}.pill{font-size:9px}.panel{padding:17px}.formgrid{grid-template-columns:1fr}.cards{gap:10px}.visual{height:111px}.visual svg{width:85px;height:85px}.card .inside{padding:11px}.premium{flex-direction:column;align-items:stretch}h1{font-size:45px}.stats{gap:14px}.fl1,.fl2{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="container top"><div class="brand"><span class="mark">X</span> TREINO<span style="color:#69e7c3">X</span></div><span class="pill">Demonstração grátis</span></header>
+<main class="container">
+<section class="hero">
+<div><span class="pill">CASA OU ACADEMIA · NO SEU RITMO</span><h1 style="margin-top:20px">Seu objetivo.<br><span>Seu próximo nível.</span></h1><p class="sub lead">Conte como você gosta de treinar. Descubra quatro exercícios gratuitos e visualize seu programa organizado por semana.</p><div class="actions"><button class="primary" onclick="start()">Montar meu treino →</button><button class="secondary" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">Como funciona?</button></div><div class="stats"><div><b>24</b>exercícios cadastrados</div><div><b>4</b>gratuitos</div><div><b>4</b>semanas de plano</div></div></div>
+<div class="hero-art"><div class="floating fl1">✓ Feito para você</div><div class="figure" aria-hidden="true">🏋️</div><div class="floating fl2">⚡ Treine no seu ritmo</div></div>
+</section>
+<section id="how" class="panel"><h2 class="sectiontitle">Como funciona</h2><p class="muted">1. Informe suas preferências. &nbsp; 2. Receba quatro exercícios gratuitos. &nbsp; 3. Acompanhe a estrutura de um plano de quatro semanas. &nbsp; 4. Desbloqueio Pix disponível após lançamento.</p><div class="tip">As animações desta demonstração são ilustrações, não GIFs de instrução técnica. A biblioteca de GIFs e o sistema seguro de pagamento pertencem à versão completa ainda em preparação.</div></section>
+<section id="quiz" class="panel hide"><h2 class="sectiontitle">Vamos montar seu perfil</h2><p class="muted">Uma prévia de treinos baseada nas suas preferências, sem informações médicas.</p><div class="steps" id="steps"><i class="active"></i><i></i><i></i></div>
+<div class="formgrid">
+<div class="field"><label for="location">Onde vai treinar?</label><select id="location"><option value="casa">Em casa</option><option value="academia">Na academia</option></select></div>
+<div class="field"><label for="goal">Seu principal objetivo</label><select id="goal"><option value="condicionamento">Condicionamento</option><option value="forca">Força e resistência</option><option value="mobilidade">Mobilidade</option></select></div>
+<div class="field"><label for="level">Experiência</label><select id="level"><option value="iniciante">Iniciante</option><option value="intermediario">Intermediário</option></select></div>
+<div class="field"><label for="days">Dias por semana</label><select id="days"><option value="2">2 dias</option><option value="3" selected>3 dias</option><option value="4">4 dias</option><option value="5">5 dias</option></select></div>
+</div><div class="actions"><button class="primary" onclick="createPlan()">Ver meus 4 exercícios gratuitos →</button></div><p class="smallprint">Exercícios são exemplos educacionais. Consulte um profissional habilitado para avaliação e prescrição personalizada. Não treine sentindo dor ou mal-estar.</p></section>
+<section id="plan" class="hide"><div class="panel"><span class="pill">Seu treino · prévia grátis</span><h2 class="sectiontitle" style="margin-top:15px">Seu ponto de partida</h2><p class="muted" id="summary"></p><div class="cards" id="cards"></div><div class="tip">As séries e repetições exibidas são informações genéricas de demonstração, não uma prescrição individual. A execução deve ser orientada por profissional.</div></div>
+<div class="panel"><h2 class="sectiontitle">Seu programa de 4 semanas</h2><p class="muted">Veja como funciona o calendário de treinos. Os exercícios completos ficam protegidos no servidor na versão comercial.</p><div class="week-tabs" id="tabs"></div><div id="weekInfo"></div></div>
+<div class="premium"><div><span class="pill">Plano completo</span><h2 class="sectiontitle" style="margin:12px 0 4px">Continue sua evolução</h2><div class="muted">Treino semanal, progresso, orientações e demonstrações GIF dos exercícios.</div><p class="smallprint">Pix ainda não ativado. Nenhuma cobrança é realizada nesta demonstração.</p></div><div><div class="price">R$ 9,90</div><button class="primary" disabled aria-label="Pagamento em preparação">Desbloqueio em breve 🔒</button></div></div></section>
+</main>
+<footer class="container footer"><strong>TreinoX</strong> · MVP de demonstração · Não substitui avaliação ou acompanhamento profissional. Nenhum dado é enviado para servidores neste protótipo.</footer>
+<script>
+'use strict';
+const exercises=[
+{n:'Agachamento',place:'casa',group:'Pernas',sets:'2 × 8 a 12',desc:'Movimento de sentar e levantar com controle.'},
+{n:'Flexão na parede',place:'casa',group:'Peito',sets:'2 × 8 a 12',desc:'Variação de flexão com apoio na parede.'},
+{n:'Ponte de glúteos',place:'casa',group:'Glúteos',sets:'2 × 10 a 12',desc:'Elevação do quadril no solo.'},
+{n:'Marcha no lugar',place:'casa',group:'Cardio',sets:'2 × 30 s',desc:'Marcha leve com postura ereta.'},
+{n:'Prancha adaptada',place:'casa',group:'Abdômen',sets:'2 × 15 s',desc:'Apoio estático adaptado.'},
+{n:'Elevação de panturrilha',place:'casa',group:'Pernas',sets:'2 × 12',desc:'Elevar e descer os calcanhares.'},
+{n:'Remada com elástico',place:'casa',group:'Costas',sets:'2 × 10',desc:'Puxar o elástico de forma controlada.'},
+{n:'Passada adaptada',place:'casa',group:'Pernas',sets:'2 × 8',desc:'Deslocamento curto com apoio.'},
+{n:'Polichinelo sem salto',place:'casa',group:'Cardio',sets:'2 × 30 s',desc:'Abertura alternada de braços e pernas.'},
+{n:'Mobilidade de ombros',place:'casa',group:'Mobilidade',sets:'2 × 30 s',desc:'Mobilização suave dos ombros.'},
+{n:'Abdominal curto',place:'casa',group:'Abdômen',sets:'2 × 10',desc:'Pequena flexão controlada do tronco.'},
+{n:'Elevação lateral de perna',place:'casa',group:'Glúteos',sets:'2 × 10',desc:'Elevação lateral sem balanço.'},
+{n:'Esteira',place:'academia',group:'Cardio',sets:'10 min leve',desc:'Caminhada em ritmo confortável.'},
+{n:'Bicicleta ergométrica',place:'academia',group:'Cardio',sets:'10 min leve',desc:'Pedalada em intensidade leve.'},
+{n:'Leg press',place:'academia',group:'Pernas',sets:'2 × 10',desc:'Empurrar plataforma com controle.'},
+{n:'Cadeira extensora',place:'academia',group:'Pernas',sets:'2 × 10',desc:'Extensão controlada dos joelhos.'},
+{n:'Cadeira flexora',place:'academia',group:'Pernas',sets:'2 × 10',desc:'Flexão de joelhos na máquina.'},
+{n:'Puxada frontal',place:'academia',group:'Costas',sets:'2 × 10',desc:'Puxada até a linha superior do peito.'},
+{n:'Remada baixa',place:'academia',group:'Costas',sets:'2 × 10',desc:'Remada sentada com carga adequada.'},
+{n:'Supino em máquina',place:'academia',group:'Peito',sets:'2 × 10',desc:'Empurrar alças da máquina à frente.'},
+{n:'Rosca alternada',place:'academia',group:'Braços',sets:'2 × 10',desc:'Flexionar um cotovelo de cada vez.'},
+{n:'Tríceps na polia',place:'academia',group:'Braços',sets:'2 × 10',desc:'Extensão de cotovelos na polia.'},
+{n:'Desenvolvimento na máquina',place:'academia',group:'Ombros',sets:'2 × 10',desc:'Empurrar alças verticalmente.'},
+{n:'Elevação de panturrilha na máquina',place:'academia',group:'Pernas',sets:'2 × 12',desc:'Elevar os calcanhares com controle.'}
+];
+const $=id=>document.getElementById(id);
+const figureSvg='<svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="59" cy="21" r="10"/><line x1="58" y1="35" x2="56" y2="71"/><line x1="57" y1="49" x2="31" y2="66"/><line x1="57" y1="49" x2="86" y2="65"/><line x1="56" y1="71" x2="35" y2="103"/><line x1="56" y1="71" x2="86" y2="102"/></svg>';
+function start(){$('quiz').classList.remove('hide');$('quiz').scrollIntoView({behavior:'smooth',block:'start'});}
+function createPlan(){
+ const location=$('location').value, goal=$('goal').value, level=$('level').value, days=Number($('days').value);
+ const options=exercises.filter(x=>x.place===location); const order=goal==='mobilidade'?[...options].reverse():goal==='forca'?[...options].sort((a,b)=>a.group==='Pernas'?-1:b.group==='Pernas'?1:0):options;
+ const free=order.slice(0,4); $('cards').replaceChildren();
+ for(const x of free){const card=document.createElement('article');card.className='card';card.innerHTML='<div class="visual">'+figureSvg+'</div><div class="inside"><span class="tag"></span><b></b><div class="small"></div><p class="small"></p></div>';card.querySelector('.tag').textContent=x.group;card.querySelector('b').textContent=x.n;card.querySelectorAll('.small')[0].textContent=x.sets;card.querySelector('p').textContent=x.desc;$('cards').append(card);}
+ $('summary').textContent='Treino '+(location==='casa'?'em casa':'na academia')+' · '+days+' dias por semana · '+level+' · objetivo: '+goal+'.';
+ $('tabs').replaceChildren();
+ for(let w=1;w<=4;w++){const btn=document.createElement('button');btn.type='button';btn.textContent='Semana '+w;btn.addEventListener('click',()=>selectWeek(w,days,level));$('tabs').append(btn);}
+ selectWeek(1,days,level);$('plan').classList.remove('hide');$('plan').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function selectWeek(week,days,level){
+ [...$('tabs').children].forEach((b,i)=>b.classList.toggle('selected',i===week-1));
+ $('weekInfo').replaceChildren();const p=document.createElement('p');p.className='muted';p.textContent=days+' sessões planejadas · Semana '+week+'. A quantidade e a progressão devem ser ajustadas por profissional. Nível: '+level+'.';$('weekInfo').append(p);
+ const x=document.createElement('div');x.className='banner';x.textContent='🔒 Detalhamento das sessões, GIFs instrutivos e registro de progresso serão liberados após ativação do sistema comercial.';$('weekInfo').append(x);
+}
+</script>
+</body></html>
