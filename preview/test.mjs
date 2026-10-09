@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import vm from "node:vm";
@@ -25,4 +26,18 @@ files.forEach((filename, i) => {
   assert.ok(statSync(path).size > 1000, "GIF vazio: " + filename);
   assert.match(readFileSync(path).subarray(0,6).toString(), /^GIF8[79]a$/, "Cabeçalho GIF inválido");
 });
+assert.match(html, /object-fit:contain/, "GIF não deve ser cortado no celular");
+assert.match(html, /\.gif\?v=3/, "A prévia deve renovar o cache dos GIFs");
+assert.match(html, /GIF animado/, "Indicador visual da animação obrigatório");
+const uniqueGifs=new Set();
+for (const filename of files) {
+  const gif=readFileSync(join("preview/gifs",filename));
+  uniqueGifs.add(createHash("sha256").update(gif).digest("hex"));
+  const width=gif.readUInt16LE(6), height=gif.readUInt16LE(8);
+  assert.ok(width>=300 && height>=200, "Animação muito pequena: "+filename);
+  const graphicControlExtensions=gif.toString("latin1").match(/\x21\xf9\x04/g) || [];
+  assert.ok(graphicControlExtensions.length>=12, "GIF não possui quadros animados suficientes: "+filename);
+}
+assert.equal(uniqueGifs.size,24,"Cada exercício deve ter seu próprio GIF");
+
 console.log("✅ HTML e JavaScript válidos; questionário, UX mobile, checkout desativado e 24 GIFs verificados.");
