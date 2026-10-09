@@ -52,3 +52,5 @@ for index,category in enumerate(CATEGORIES,1):
     path=OUT/f"ex-{index:02}.gif"
     frames[0].save(path,save_all=True,append_images=frames[1:],duration=88,loop=0,optimize=True,disposal=2)
 print(f"24 GIFs originais gerados em: {OUT}")
+
+# CI trigger
