@@ -1,5 +1,17 @@
 # TreinoX Web — MVP 0.1.0
 
+## Versão online publicada (demonstração)
+
+- **Site:** https://treinox-web.vercel.app
+- **Código da demonstração:** `preview/index.html` (estático, sem credenciais)
+- **Exercícios:** 24 GIFs esquemáticos originais gerados via GitHub Actions em `preview/gifs/`.
+- **Fluxo:** perfil casa/academia, objetivo, nível, dias, quatro exemplos gratuitos e calendário de quatro semanas.
+- **Pagamento:** intencionalmente desativado; nenhum checkout real ocorre na demonstração.
+- **QA:** `node preview/test.mjs` e GitHub Actions `TreinoX Preview QA`.
+
+**Atenção:** o projeto React + Cloudflare Worker descrito nas seções abaixo corresponde ao **pacote técnico MVP separado**, ainda não importado integralmente neste repositório. As instruções para Asaas e Cloudflare somente se aplicarão depois que essa base estiver no GitHub. Não use esta prévia para cobrar clientes ou prescrever treinos; GIFs esquemáticos não demonstram com precisão a execução biomecânica.
+
+
 Sistema web responsivo com **prévia de quatro exercícios gratuita**, questionário de perfil, **24 exercícios animados em GIF original**, programa de **quatro semanas**, registro de progresso e checkout Pix Asaas protegido no servidor.
 
 > **Estado do projeto:** MVP técnico para avaliação. Não realizar vendas reais antes da revisão profissional dos treinos, publicação da política de privacidade adequada, autenticação com recuperação de conta e testes de pagamento em sandbox.
